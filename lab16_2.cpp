@@ -1,13 +1,24 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 int main(){
-	int data[] = {7,8,2,1,2,4,6,9,0,1}; 
-	cout << "Before: ";
-	for(int i = 0; i<10; i++) cout << data[i] << " ";
-	sort(&data[0],&data[10]);
-	cout << "\nAfter: ";
-	for(int i = 0; i<10; i++) cout << data[i] << " ";
+	int a = 5;
+	int b = 'A';
+	int &c = b;
+	int *x = &a;
+	int *y = &b;
+	int *z = x;
+	cout << a << " " << char (b) << " " << char(c) << " " << x << " "<< y << " " << z << "\n";
+	cout << &a << " " << &b << " " << &c << " " << x << " "<< y << " " << z << "\n";
+	c = 'F';
+	cout << a << " " << char (b) << " " << char(c) << " " << x << " "<< y << " " << z << "\n";
+	*y = 'W';
+	cout << a << " " << char (b) << " " << char(c) << " " << x << " "<< y << " " << z << "\n";
+	*x = 6;
+	cout << a << " " << char (b) << " " << char(c) << " " << x << " "<< y << " " << z << "\n";
+	*z = 7 ;
+	cout << a << " " << char (b) << " " << char(c) << " " << x << " "<< y << " " << z << "\n";
+
+
 	return 0;
 }

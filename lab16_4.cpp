@@ -17,3 +17,11 @@ int main(){
 	
 	return 0;
 }
+
+void  shuffle(int &x,int &y,int &z,int &k){
+	int temp = x;
+	x = z;
+	z = k;
+	k = y;
+	y = temp;
+}
